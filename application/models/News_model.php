@@ -1,4 +1,7 @@
 <?php
+
+//model tugasnya berinteraksi langsung dengan database
+
 class News_model extends CI_Model {
 
         public function __construct()

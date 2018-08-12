@@ -11,6 +11,10 @@ class News extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+        $data['news'] = $this->news_model->get_news(); // cara pemanggilan = $this->nama_model->nama fungsi yg mau kita pake
+        $data['title'] = 'Arsip Berita';
+        
+        
+        $this->load->view('news/index', $data);
 	}
 }
