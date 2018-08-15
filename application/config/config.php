@@ -35,7 +35,9 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+
+//isi index.php jika index terlihat
+$config['index_page'] = 'index.php'; //kosongkan jika menyembunyikan index lewat htaccess
 
 /*
 |--------------------------------------------------------------------------
