@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['news'] = 'news'; //memanggil controller news
+$route['news/(:any)'] = 'news/view/$1';
 
 $route['default_controller'] = 'halaman/view';
-
 $route['(:any)'] = 'halaman/view/$1'; //(:any) berfungsi agar apapun yg user ketik bisa(fleksibel)
                                       //$1 untuk delarasi kalo kita akan memasukkan parameter disini
 
