@@ -25,4 +25,23 @@ class News extends CI_Controller {
         $this->load->view('news/view', $data);
 	}
 
+    public function create()
+    {   
+        $this->load->helper('form'); //untuk dapat menggunakan helper form di view/news/create.php 
+        $this->load->library('form_validation'); //untuk menggunakan form validation ketika error di view/news/create.php 
+
+        //validasi form
+        $this->form_validation->set_rules('title', 'Judul', 'required');
+        $this->form_validation->set_rules('text', 'Text', 'required');
+
+        if ($this->form_validation->run() === FALSE) {
+            //KETIKA di run hasilnya salah akan tetap di halaman news/create
+            $this->load->view('news/create');
+        } else{
+            //jika berhubungan dengan database, kita akan membutuhkan model
+            $this->news_model->set_news();
+            redirect('news');
+        }
+
+    }
 }
