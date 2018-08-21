@@ -53,7 +53,7 @@ class News_model extends CI_Model {
         public function update_news($id)
         {       
                 //menggunakan helper url untuk set nama slug di database, judul yang berisi spasi akan menjadi - misal :
-                //misalnya titlenya "judul pertama saya" maka otomatis slug akan berisi judul-pertama-saya
+                 //misalnya titlenya "judul pertama saya" maka otomatis slug akan berisi judul-pertama-saya
                 $this->load->helper('url');
                 $slug = url_title($this->input->post('title'), 'dash', TRUE); //(dari mana titlenya diambi, tiap ada tanda diubah jadi tanda/garis, boolean TRUE)
 
@@ -69,6 +69,12 @@ class News_model extends CI_Model {
                 //untuk update ke db
                 return $this->db->update('news', $data); //nama tabel, datanya
 
+        }
 
+        public function delete_news($id)
+        {
+                //jika tidak ingin deklarasi kondisi menggunakan $this->db->where('id', $id);
+                //bisa menggunakan array dengan cara array('id' => $id)
+                return $this->db->delete('news', array('id' => $id));
         }
 }
