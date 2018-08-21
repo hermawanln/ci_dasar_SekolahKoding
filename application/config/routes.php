@@ -1,8 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-//CREATE
+//CREATE, $route['news/create'] untuk deklarasi agar halaman news/create aktif
 $route['news/create'] = 'news/create'; //ke controller news, lalu menjalankan metode create
+
+//UPDATE (:any) akan berisi id karena mengupdate membutuhkan parameter update
+$route['news/update/(:any)'] = 'news/update/$1';
 
 $route['news'] = 'news'; //memanggil controller news
 $route['news/(:any)'] = 'news/view/$1';

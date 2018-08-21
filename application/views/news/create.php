@@ -8,6 +8,6 @@
     <label for="title">Text</label>
     <textarea name="text" cols="30" rows="10"></textarea> <br>
 
-    <input type="submit" value="submit" value="Kirim!">    
+    <input type="submit" value="Kirim!">    
 
 <?php echo form_close();?>
