@@ -6,6 +6,8 @@ class News_model extends CI_Model {
 
         public function __construct()
         {
+                //berguna untuk pemanggilan library database
+                //bisa di deklarasikan di config/autoloads dengan cara $autoload['libraries'] = array('database');
                 $this->load->database(); //query builder dari CI (menggantikan SELECT * BLABLABLA)
         }
         
