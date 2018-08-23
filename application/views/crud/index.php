@@ -34,9 +34,9 @@
                 <td><?php echo $key['status'] ?></td>
                 <td><?php echo $key['jurusan'] ?></td>
                 <td>
+                    <a href="<?php base_url() ?>crud/update/<?php echo $key['id'] ?>">Edit</a>
                     <a href="<?php base_url() ?>crud/delete/<?php echo $key['id'] ?>"
                     onclick="return confirm('Yakin hapus ?')">Delete</a>
-                
                 </td>
             </tr>
         <?php endforeach ?>
