@@ -7,6 +7,7 @@
     <title>Halaman CRUD</title>
 </head>
 <body>
+    <a href="">Create</a>
     <table border="4">
         <tr>
             <td>ID</td>
