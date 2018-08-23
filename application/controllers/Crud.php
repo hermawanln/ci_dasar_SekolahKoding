@@ -81,6 +81,16 @@ class Crud extends CI_Controller {
         redirect('crud','refresh');
         
     }
+
+    //Read one item
+    public function read( $id = NULL )
+    {
+        $this->db->where('id', $id);
+        $data['content'] = $this->db->get('identitas');
+        
+        $this->load->view('crud/index', $data);
+        
+    }
 }
 
 /* End of file Crud.php */
