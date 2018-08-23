@@ -49,6 +49,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['default_controller'] = 'home';
+
+//menyembunyikan nama controller yg sesungguhnya untuk mengelabuhi peretas
+$route['profil'] = 'home/controller_profil'; //agar hanya akses profil maka kita dpt mengakses func halamanprofil
+$route['contact'] = 'home/controller_contact';
+$route['404_override'] = 'controllererror';
 $route['translate_uri_dashes'] = FALSE;

@@ -1,0 +1,1 @@
+<h1>Selamat datang ! :D <br></h1> Pemilik situs ini adalah <br> <?php echo $nama ?> <br><br>
