@@ -53,7 +53,11 @@ class Crud extends CI_Controller {
     //Delete one item
     public function delete( $id = NULL )
     {
-
+        $this->db->where('id', $id);
+        $this->db->delete('identitas');
+        
+        redirect('crud','refresh');
+        
     }
 }
 

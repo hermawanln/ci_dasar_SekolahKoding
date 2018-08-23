@@ -14,6 +14,7 @@
             <td>NAMA</td>
             <td>STATUS</td>
             <td>JURUSAN</td>
+            <td>ACTION</td>
         </tr>
         <!-- Cara 1 : menggunakan result biasa -->
         <!-- <?php foreach ($content->result() as $key): ?>
@@ -32,6 +33,11 @@
                 <td><?php echo $key['nama'] ?></td>
                 <td><?php echo $key['status'] ?></td>
                 <td><?php echo $key['jurusan'] ?></td>
+                <td>
+                    <a href="<?php base_url() ?>crud/delete/<?php echo $key['id'] ?>"
+                    onclick="return confirm('Yakin hapus ?')">Delete</a>
+                
+                </td>
             </tr>
         <?php endforeach ?>
     </table>
