@@ -24,6 +24,23 @@ class Crud extends CI_Controller {
     // Add a new item
     public function add()
     {
+        $this->load->view('crud/add');
+        
+    }
+
+    public function action_add()
+    {
+        $data = array(
+            'nama' => $this->input->post('nama'),
+            'status' => $this->input->post('status'), 
+            'jurusan' => $this->input->post('jurusan'),
+        );
+
+        $this->db->insert('identitas', $data);
+
+        redirect('crud','refresh');
+        
+        
 
     }
 
